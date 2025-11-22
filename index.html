@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D's Printing Service | High Quality Printing Without High Prices</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="D's Printing Service Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="quote-btn" onclick="openQuoteDialog()">Get Free Quote</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Quote Dialog -->
+    <div id="quoteDialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" onclick="closeQuoteDialog()">&times;</span>
+            <h2>Request a Free Quote</h2>
+            <form id="quoteForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Describe your printing needs" required></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <img src="images/Technology.png" alt="Professional Printing Services" class="hero-image">
+                <h1 class="hero-text">High quality services without the high prices</h1>
+                <p class="hero-subtext">Professional printing solutions for small businesses, creatives, and the community</p>
+                <a href="services.html" class="cta-button">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <h2 class="section-title">Why Choose D's Printing Service</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-medal"></i>
+                    <h3>Quality</h3>
+                    <p>Precision in every print, from paper texture to color accuracy.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>Eco friendly inks, recycled materials, and carbon neutral shipping.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Community</h3>
+                    <p>Supporting local businesses with tailored solutions.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>User friendly design tools and real time previews.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <h2 class="section-title">Our Products & Services</h2>
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="images/business-cards.jpg" alt="Business Cards">
+                    <div class="product-card-content">
+                        <h3>Business Cards</h3>
+                        <p>Professional business cards with various finishes and paper options.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/flyers.jpg" alt="Flyers">
+                    <div class="product-card-content">
+                        <h3>Flyers</h3>
+                        <p>High-quality flyers for promotional needs in various sizes.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/brochures.jpg" alt="Brochures">
+                    <div class="product-card-content">
+                        <h3>Brochures</h3>
+                        <p>Custom brochures in various sizes and folding options.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/banners.jpg" alt="Banners">
+                    <div class="product-card-content">
+                        <h3>Banners</h3>
+                        <p>Large format banners for indoor and outdoor use.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="services.html" class="cta-button">View All Services</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 25 Adams Street, Belhar, 7493</p>
+                <p><i class="fas fa-phone"></i> +27 63 744 8901</p>
+                <p><i class="fas fa-envelope"></i> dsprintservices@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri 9am-7pm</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <p><a href="index.html" style="color: white; text-decoration: none;">Home</a></p>
+                <p><a href="about.html" style="color: white; text-decoration: none;">About</a></p>
+                <p><a href="services.html" style="color: white; text-decoration: none;">Services</a></p>
+                <p><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></p>
+            </div>
+            <div class="footer-section services">
+                <h3>Our Services</h3>
+                <p>Business Cards</p>
+                <p>Flyers & Brochures</p>
+                <p>Banners & Posters</p>
+                <p>Invitations & Menus</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 D's Printing Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openQuoteDialog() {
+            document.getElementById('quoteDialog').style.display = 'flex';
+        }
+
+        function closeQuoteDialog() {
+            document.getElementById('quoteDialog').style.display = 'none';
+        }
+
+        // Close dialog when clicking outside
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('quoteDialog')) {
+                closeQuoteDialog();
+            }
+        }
+        
+        // Form submission handlers
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your quote request! We will get back to you soon.');
+            closeQuoteDialog();
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | D's Printing Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="D's Printing Service Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="quote-btn" onclick="openQuoteDialog()">Get Free Quote</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Quote Dialog -->
+    <div id="quoteDialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" onclick="closeQuoteDialog()">&times;</span>
+            <h2>Request a Free Quote</h2>
+            <form id="quoteForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Describe your printing needs" required></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Our Printing Services</h1>
+        <p>Comprehensive printing solutions for businesses, creatives, and the community</p>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Services Categories -->
+        <section class="services-hero">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p>From business essentials to creative projects, we've got you covered</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="images/business-cards.jpg" alt="Business Cards">
+                    <div class="product-card-content">
+                        <h3>Business Cards</h3>
+                        <p>Professional business cards with various finishes, paper options, and custom designs.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Standard & Premium stocks</li>
+                            <li>Matte & Gloss finishes</li>
+                            <li>Spot UV & Foil options</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/flyers.jpg" alt="Flyers">
+                    <div class="product-card-content">
+                        <h3>Flyers & Leaflets</h3>
+                        <p>High-quality flyers for promotions, events, and marketing campaigns.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>A5, A6, DL sizes</li>
+                            <li>Single & Double sided</li>
+                            <li>Bulk discounts available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/brochures.jpg" alt="Brochures">
+                    <div class="product-card-content">
+                        <h3>Brochures</h3>
+                        <p>Custom brochures in various sizes and folding options for businesses.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Gate fold, Z-fold, Roll fold</li>
+                            <li>Gloss & Matte finishes</li>
+                            <li>Perfect bound options</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/banners.jpg" alt="Banners">
+                    <div class="product-card-content">
+                        <h3>Banners & Signs</h3>
+                        <p>Large format banners for indoor and outdoor advertising.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Vinyl & Fabric materials</li>
+                            <li>Eyelets & Pole pockets</li>
+                            <li>Weather resistant options</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/posters.jpg" alt="Posters">
+                    <div class="product-card-content">
+                        <h3>Posters</h3>
+                        <p>High-resolution posters in various sizes for events and promotions.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>A3, A2, A1 sizes</li>
+                            <li>Indoor & Outdoor options</li>
+                            <li>Lamination available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/stickers.jpg" alt="Stickers">
+                    <div class="product-card-content">
+                        <h3>Stickers & Labels</h3>
+                        <p>Custom stickers and labels for products, packaging, and promotions.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Vinyl & Paper options</li>
+                            <li>Die-cut shapes</li>
+                            <li>Waterproof materials</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/invitations.jpg" alt="Invitations">
+                    <div class="product-card-content">
+                        <h3>Invitations & Menus</h3>
+                        <p>Beautifully designed invitations and menu cards for events and restaurants.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Wedding invitations</li>
+                            <li>Restaurant menus</li>
+                            <li>Event programs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/photocopying.jpg" alt="Photocopying">
+                    <div class="product-card-content">
+                        <h3>Photocopying & Documents</h3>
+                        <p>High-quality photocopying services for documents and images.</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Black & White copies</li>
+                            <li>Color copies</li>
+                            <li>Binding services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <h2 class="section-title">Our Printing Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>We discuss your needs, budget, and timeline to understand your project requirements.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Design & Proofing</h3>
+                    <p>Our team creates or reviews your design and provides digital proofs for approval.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Production</h3>
+                    <p>We print your materials using high-quality equipment and sustainable practices.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Delivery</h3>
+                    <p>Your finished products are delivered with care, ready to make an impact.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="padding: 60px 20px; text-align: center; background: var(--orange); color: white;">
+            <h2 style="margin-bottom: 20px;">Ready to Start Your Project?</h2>
