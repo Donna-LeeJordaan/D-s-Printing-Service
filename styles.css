@@ -1,4 +1,5 @@
 /* Brand Colors from Guidelines */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&display=swap');
 :root {
     --orange: #F17053;
     --yellow: #DDEB54;
@@ -21,6 +22,14 @@ body {
     line-height: 1.6;
 }
 
+/* Use Playfair Display for headings and bold text */
+h1, h2, h3, h4, h5, h6, strong, b, .bold,
+.quote-btn, .cta-button, .service-category-btn, .dialog-content h2,
+.contact-info h3, .section-title, .feature-box h3, .product-card h3,
+.about-text h2, .mission h3, .vision h3, .footer-section h3, .step-number {
+    font-family: 'Playfair Display', serif;
+}
+
 /* Header Styles */
 header {
     background-color: white;
@@ -40,8 +49,8 @@ header {
 }
 
 .logo img {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
 }
 
 nav ul {
