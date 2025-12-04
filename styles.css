@@ -704,3 +704,78 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Service Details Dialog */
+.service-details-content {
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.service-details-content h2 {
+    color: var(--orange);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-details-content h3,
+.service-details-content h4 {
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.service-details-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Make service items clickable */
+.service-item {
+    cursor: pointer;
+    padding: 12px 15px;
+    background: var(--light);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    border-left: 3px solid var(--orange);
+}
+
+.service-item:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateX(5px);
+}
+
+.product-card {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Scrollbar styling for service details dialog */
+.service-details-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.service-details-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.service-details-content::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 4px;
+}
+
+.service-details-content::-webkit-scrollbar-thumb:hover {
+    background: #e05d3f;
+}
+

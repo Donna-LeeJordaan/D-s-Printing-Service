@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
         <div class="header-container">
             <div class="logo">
                 <img src="image/logo.jpg" alt="D's Printing Service Logo">
-            
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -40,12 +41,22 @@
         </div>
     </div>
 
+    <!-- Service Details Dialog -->
+    <div id="serviceDetailsDialog" class="dialog">
+        <div class="dialog-content service-details-content">
+            <span class="close" onclick="closeServiceDetails()">&times;</span>
+            <div id="serviceDetailsContent">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
     <!-- Page Header -->
     <section class="page-header">
         <h1>Our Printing Services</h1>
         <p>Comprehensive printing solutions for businesses, creatives, and the community</p>
     </section>
-
+    
     <!-- Main Content -->
     <main>
         <!-- Services Categories with Dropdowns -->
@@ -64,50 +75,30 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="service-items">
-                        <div class="service-item">Digital Printing</div>
-                        <div class="service-item">Color Copying</div>
-                        <div class="service-item">Black & White Copying</div>
-                        <div class="service-item">Large Format Printing</div>
-                        <div class="service-item">Photo Printing</div>
-                        <div class="service-item">Bulk Printing</div>
+                        <div class="service-item" data-service="digital-printing">
+                            Digital Printing
+                        </div>
+                        <div class="service-item" data-service="color-copying">
+                            Color Copying
+                        </div>
+                        <div class="service-item" data-service="bw-copying">
+                            Black & White Copying
+                        </div>
+                        <div class="service-item" data-service="large-format">
+                            Large Format Printing
+                        </div>
+                        <div class="service-item" data-service="photo-printing">
+                            Photo Printing
+                        </div>
+                        <div class="service-item" data-service="bulk-printing">
+                            Bulk Printing
+                        </div>
                     </div>
                 </div>
 
-                <!-- Language Format Printing -->
-                <div class="service-category">
-                    <button class="service-category-btn">
-                        <i class="fas fa-language"></i>
-                        Language Format Printing
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-items">
-                        <div class="service-item">Multilingual Documents</div>
-                        <div class="service-item">Right-to-Left Text (Arabic/Hebrew)</div>
-                        <div class="service-item">Asian Character Sets</div>
-                        <div class="service-item">Translation Assistance</div>
-                    </div>
-                </div>
+           
 
-                <!-- Finishing and Binding -->
-                <div class="service-category">
-                    <button class="service-category-btn">
-                        <i class="fas fa-book"></i>
-                        Finishing and Binding
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-items">
-                        <div class="service-item">Spiral Binding</div>
-                        <div class="service-item">Wire-O Binding</div>
-                        <div class="service-item">Perfect Binding</div>
-                        <div class="service-item">Saddle Stitching</div>
-                        <div class="service-item">Lamination</div>
-                        <div class="service-item">Corner Stitching</div>
-                    </div>
-                </div>
-
-                
-
-                <!-- Cards & Invitations -->
+                <!-- Cards -->
                 <div class="service-category">
                     <button class="service-category-btn">
                         <i class="fas fa-id-card"></i>
@@ -115,29 +106,46 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="service-items">
-                        <div class="service-item">Business Cards</div>
-                        <div class="service-item">Greeting Cards</div>
-                        <div class="service-item">Loyalty Cards</div>
-                        <div class="service-item">Membership Cards</div>
-                        <div class="service-item">Visit Cards</div>
+                        <div class="service-item" data-service="business-cards">
+                            Business Cards
+                        </div>
+                        <div class="service-item" data-service="greeting-cards">
+                            Greeting Cards
+                        </div>
+                        <div class="service-item" data-service="loyalty-cards">
+                            Loyalty Cards
+                        </div>
+                        <div class="service-item" data-service="membership-cards">
+                            Membership Cards
+                        </div>
+                        <div class="service-item" data-service="visit-cards">
+                            Visit Cards
+                        </div>
                     </div>
                 </div>
 
-                <!--  Invitations -->
+                <!-- Invitations -->
                 <div class="service-category">
                     <button class="service-category-btn">
                         <i class="fas fa-envelope"></i>
-                        Cards & Invitations
+                        Invitations
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="service-items">
-                        <div class="service-item">Wedding Invitations</div>
-                        <div class="service-item">Event Invitations</div>
-                        <div class="service-item">Birthday Invitations</div>
-                        <div class="service-item">Announcement Cards</div>
+                        <div class="service-item" data-service="wedding-invitations">
+                            Wedding Invitations
+                        </div>
+                        <div class="service-item" data-service="event-invitations">
+                            Event Invitations
+                        </div>
+                        <div class="service-item" data-service="birthday-invitations">
+                            Birthday Invitations
+                        </div>
+                        <div class="service-item" data-service="announcement-cards">
+                            Announcement Cards
+                        </div>
                     </div>
                 </div>
-
 
                 <!-- Flyers -->
                 <div class="service-category">
@@ -147,32 +155,46 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="service-items">
-                        <div class="service-item">A4 Flyers</div>
-                        <div class="service-item">A5 Flyers</div>
-                        <div class="service-item">DL Flyers</div>
-                        <div class="service-item">Promotional Flyers</div>
-                        <div class="service-item">Event Flyers</div>
+                        <div class="service-item" data-service="a4-flyers">
+                            A4 Flyers
+                        </div>
+                        <div class="service-item" data-service="a5-flyers">
+                            A5 Flyers
+                        </div>
+                        <div class="service-item" data-service="dl-flyers">
+                            DL Flyers
+                        </div>
+                        <div class="service-item" data-service="promotional-flyers">
+                            Promotional Flyers
+                        </div>
+                        <div class="service-item" data-service="event-flyers">
+                            Event Flyers
+                        </div>
                     </div>
                 </div>
 
-
-                <!-- Food Menus -->
+                <!-- Menus -->
                 <div class="service-category">
                     <button class="service-category-btn">
                         <i class="fas fa-utensils"></i>
-                         Menus
+                        Menus
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="service-items">
-                        <div class="service-item">Restaurant Menus</div>
-                        <div class="service-item">Cafe Menus</div>
-                        <div class="service-item">Takeaway Menus</div>
-                        <div class="service-item">Specialty Menus</div>
+                        <div class="service-item" data-service="restaurant-menus">
+                            Restaurant Menus
+                        </div>
+                        <div class="service-item" data-service="cafe-menus">
+                            Cafe Menus
+                        </div>
+                        <div class="service-item" data-service="takeaway-menus">
+                            Takeaway Menus
+                        </div>
+                        <div class="service-item" data-service="specialty-menus">
+                            Specialty Menus
+                        </div>
                     </div>
                 </div>
-
-
-               
 
                 <!-- Stationery -->
                 <div class="service-category">
@@ -182,20 +204,28 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="service-items">
-                        <div class="service-item">Business Stationery</div>
-                        <div class="service-item">Corporate Stationery Sets</div>
-                        <div class="service-item">Personal Stationery</div>
-                        <div class="service-item">Custom Stationery Designs</div>
+                        <div class="service-item" data-service="business-stationery">
+                            Business Stationery
+                        </div>
+                        <div class="service-item" data-service="corporate-stationery">
+                            Corporate Stationery Sets
+                        </div>
+                        <div class="service-item" data-service="personal-stationery">
+                            Personal Stationery
+                        </div>
+                        <div class="service-item" data-service="custom-stationery">
+                            Custom Stationery Designs
+                        </div>
                     </div>
                 </div>
-
-        
+            </div>
+        </section>
 
         <!-- Featured Services Grid -->
         <section class="products-section">
             <h2 class="section-title">Featured Services</h2>
             <div class="products-container">
-                <div class="product-card">
+                <div class="product-card" data-service="business-cards">
                     <div class="product-card-content">
                         <h3>Business Cards</h3>
                         <p>Professional business cards with various finishes, paper options, and custom designs.</p>
@@ -206,7 +236,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-service="flyers">
                     <div class="product-card-content">
                         <h3>Flyers & Leaflets</h3>
                         <p>High-quality flyers for promotions, events, and marketing campaigns.</p>
@@ -217,7 +247,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-service="posters">
                     <div class="product-card-content">
                         <h3>Posters</h3>
                         <p>High-resolution posters in various sizes for events and promotions.</p>
@@ -229,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-service="stickers-labels">
                     <div class="product-card-content">
                         <h3>Stickers & Labels</h3>
                         <p>Custom stickers and labels for products, packaging, and promotions.</p>
@@ -240,7 +270,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-service="invitations-menus">
                     <div class="product-card-content">
                         <h3>Invitations & Menus</h3>
                         <p>Beautifully designed invitations and menu cards for events and restaurants.</p>
@@ -327,6 +357,156 @@
     </footer>
 
     <script>
+        // Service details database
+        const serviceDetails = {
+            // Printing and Copying
+            'digital-printing': {
+                title: 'Digital Printing',
+                description: 'High-quality digital printing services for all your printing needs. Using state-of-the-art digital printers for vibrant colors and sharp text.',
+                features: [
+                    'High-resolution printing up to 1200 dpi',
+                    'Full-color printing capabilities',
+                    'Fast turnaround times',
+                    'Variable data printing available',
+                    'Short to medium print runs'
+                ],
+                pricing: 'Starting from $0.10 per page for standard A4',
+                turnaround: '24-48 hours standard turnaround'
+            },
+            'color-copying': {
+                title: 'Color Copying',
+                description: 'Professional color copying services for documents, photos, and presentations.',
+                features: [
+                    'High-quality color reproduction',
+                    'Various paper stocks available',
+                    'Single and double-sided copying',
+                    'Collating and stapling options',
+                    'Bulk copying discounts'
+                ],
+                pricing: 'Starting from $0.25 per color copy',
+                turnaround: 'Same day service available'
+            },
+            'bw-copying': {
+                title: 'Black & White Copying',
+                description: 'Affordable black and white copying for documents, reports, and manuscripts.',
+                features: [
+                    'Crisp, clean black and white copies',
+                    'Fast copying speed',
+                    'Various paper weights available',
+                    'Collating and binding options',
+                    'Large volume discounts'
+                ],
+                pricing: 'Starting from $0.05 per page',
+                turnaround: 'Immediate service for small jobs'
+            },
+            'large-format': {
+                title: 'Large Format Printing',
+                description: 'Professional large format printing for banners, posters, and displays.',
+                features: [
+                    'Up to 54" wide printing',
+                    'Indoor and outdoor materials',
+                    'UV-resistant inks',
+                    'Lamination options',
+                    'Mounting and finishing services'
+                ],
+                pricing: 'Starting from $15 per square foot',
+                turnaround: '2-3 business days'
+            },
+            'photo-printing': {
+                title: 'Photo Printing',
+                description: 'Professional photo printing on various materials including glossy, matte, and canvas.',
+                features: [
+                    'High-resolution photo printing',
+                    'Multiple paper finishes',
+                    'Canvas printing available',
+                    'Custom sizes',
+                    'Photo restoration services'
+                ],
+                pricing: 'Starting from $0.50 for 4x6 prints',
+                turnaround: '24-hour service'
+            },
+            'bulk-printing': {
+                title: 'Bulk Printing',
+                description: 'Cost-effective bulk printing solutions for businesses and organizations.',
+                features: [
+                    'Significant volume discounts',
+                    'Professional quality',
+                    'Flexible scheduling',
+                    'Delivery options available',
+                    'Custom packaging'
+                ],
+                pricing: 'Custom quotes based on volume',
+                turnaround: '1-2 weeks depending on quantity'
+            },
+            // Cards
+            'business-cards': {
+                title: 'Business Cards',
+                description: 'Professional business cards that make a lasting impression. Available in various finishes and paper stocks.',
+                features: [
+                    'Standard & Premium paper stocks',
+                    'Matte & Gloss finishes',
+                    'Spot UV coating',
+                    'Foil stamping options',
+                    'Rounded corners available'
+                ],
+                pricing: 'Starting from $25 for 100 cards',
+                turnaround: '3-5 business days'
+            },
+            'flyers': {
+                title: 'Flyers & Leaflets',
+                description: 'Eye-catching flyers perfect for promotions, events, and marketing campaigns.',
+                features: [
+                    'A4, A5, and DL sizes',
+                    'Single & Double sided printing',
+                    'Full-color printing',
+                    'Various paper weights',
+                    'Folding options available'
+                ],
+                pricing: 'Starting from $50 for 100 A5 flyers',
+                turnaround: '2-3 business days'
+            },
+            'posters': {
+                title: 'Posters',
+                description: 'High-resolution posters for events, promotions, and displays.',
+                features: [
+                    'A3, A2, A1 sizes',
+                    'Indoor & Outdoor materials',
+                    'Water-resistant options',
+                    'Lamination services',
+                    'Eyelets for hanging'
+                ],
+                pricing: 'Starting from $10 for A3 posters',
+                turnaround: '24-48 hours'
+            },
+            'stickers-labels': {
+                title: 'Stickers & Labels',
+                description: 'Custom stickers and labels for products, packaging, and promotional use.',
+                features: [
+                    'Vinyl & Paper materials',
+                    'Die-cut shapes',
+                    'Waterproof options',
+                    'Kiss-cut for easy peeling',
+                    'Bulk discounts available'
+                ],
+                pricing: 'Starting from $30 for 50 stickers',
+                turnaround: '3-5 business days'
+            },
+            'invitations-menus': {
+                title: 'Invitations & Menus',
+                description: 'Elegant invitations and professional menu cards for all occasions.',
+                features: [
+                    'Wedding invitations',
+                    'Restaurant menus',
+                    'Event programs',
+                    'Embossing options',
+                    'Foil detailing available'
+                ],
+                pricing: 'Starting from $1.50 per invitation',
+                turnaround: '5-7 business days'
+            },
+            // Add more service details as needed...
+        };
+
         function openQuoteDialog() {
             document.getElementById('quoteDialog').style.display = 'flex';
         }
@@ -335,12 +515,76 @@
             document.getElementById('quoteDialog').style.display = 'none';
         }
 
-        // Close dialog when clicking outside
+        function openServiceDetails(serviceId) {
+            const service = serviceDetails[serviceId];
+            if (!service) {
+                // If service details not found, show generic info
+                showServiceDetails({
+                    title: 'Service Details',
+                    description: 'Detailed information about this service is coming soon.',
+                    features: ['Contact us for more information'],
+                    pricing: 'Contact for pricing',
+                    turnaround: 'Varies by project'
+                });
+                return;
+            }
+            showServiceDetails(service);
+        }
+
+        function showServiceDetails(service) {
+            const content = document.getElementById('serviceDetailsContent');
+            content.innerHTML = `
+                <h2>${service.title}</h2>
+                <p style="margin: 20px 0; font-size: 1.1rem;">${service.description}</p>
+                
+                <div style="background: var(--light); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: var(--orange); margin-bottom: 15px;">Features</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        ${service.features.map(feature => `<li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                            <i class="fas fa-check" style="color: var(--orange); position: absolute; left: 0;"></i> ${feature}
+                        </li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+                    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4 style="color: var(--orange); margin-bottom: 10px;"><i class="fas fa-tag"></i> Pricing</h4>
+                        <p>${service.pricing}</p>
+                    </div>
+                    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4 style="color: var(--orange); margin-bottom: 10px;"><i class="fas fa-clock"></i> Turnaround</h4>
+                        <p>${service.turnaround}</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="quote-btn" onclick="openQuoteDialog()" style="margin-right: 10px;">
+                        <i class="fas fa-quote-right"></i> Get Quote
+                    </button>
+                    <button onclick="closeServiceDetails()" style="background: var(--dark); color: white; border: none; padding: 12px 30px; border-radius: 4px; cursor: pointer; font-weight: 600;">
+                        Close
+                    </button>
+                </div>
+            `;
+            document.getElementById('serviceDetailsDialog').style.display = 'flex';
+        }
+
+        function closeServiceDetails() {
+            document.getElementById('serviceDetailsDialog').style.display = 'none';
+        }
+
+        // Close dialogs when clicking outside
         window.onclick = function(event) {
-            if (event.target == document.getElementById('quoteDialog')) {
+            const quoteDialog = document.getElementById('quoteDialog');
+            const serviceDialog = document.getElementById('serviceDetailsDialog');
+            
+            if (event.target == quoteDialog) {
                 closeQuoteDialog();
             }
-        }
+            if (event.target == serviceDialog) {
+                closeServiceDetails();
+            }
+        };
         
         // Form submission handlers
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
@@ -352,6 +596,7 @@
 
         // Services dropdown functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Category dropdown functionality
             const categoryButtons = document.querySelectorAll('.service-category-btn');
             
             categoryButtons.forEach(button => {
@@ -370,6 +615,18 @@
                     } else {
                         icon.classList.remove('fa-chevron-up');
                         icon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+
+            // Service item click functionality
+            const serviceItems = document.querySelectorAll('.service-item, .product-card');
+            
+            serviceItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const serviceId = this.getAttribute('data-service');
+                    if (serviceId) {
+                        openServiceDetails(serviceId);
                     }
                 });
             });
